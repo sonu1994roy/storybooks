@@ -1,0 +1,122 @@
+<!-- <div className="imgslider">
+        
+          {images.map((item) =>(
+
+            <div key={item.id} className="hero" >
+
+              <div className="hero-content">
+
+                <h1 className="hero-title">
+                 {item.h1}
+                </h1>
+
+                <h2 className="hero-subtitle">
+                 {item.h2}
+                </h2>
+
+                <button type="button" className="btn btn-outline-success" onclick="location.href='tours.html'">
+                  Search for tours &raquo;
+                </button>
+
+              </div>
+
+
+
+              <section class="blog-sec">
+                <div class=" container stu-blog">
+                    <div class="blog-container">
+                        <h1>latest blog</h1>
+                        <div id="imgbox2"><img id="img-blog" src="ch2.jpg" alt=""/></div>
+                        <div class="blog-contant">
+                            <h3>date 20 20</h3>
+                            <a href="#contact" class="blog-heading">lates news lorem isupm doler</a>
+                            <h3> <a href="https://mail.google.com/mail/u/0/?#inbox?compose=CllgCJqWgqZbWrdVwpjhWkmRsQJGxcVNmrNzPSVDpvwsDbwzlnWpbGMSpJGXRsWcpFcmhMpdRxq"
+                                    target="blank">Read More</a></h3>
+                        </div>
+                    </div>
+                    <div className="blog-container">
+                        <h1>latest blog</h1>
+                        <div>
+                            <div id="imgbox"><img id="img-blog2" src="chield.jpg" alt=""/>
+                            </div>
+                            <div class="blog-contant">
+                                <h3 >date 20 20</h3>
+                                <a href="#contact" class="blog-heading" style="margin: 0px; padding: .5rem;">lates news lorem
+                                    isupm doler</a>
+                            </div>
+                        </div>
+                        <div >
+                            <div id="imgbox"><img id="img-blog2" src="chield.jpg" alt=""/>
+                            </div>
+                            <div class="blog-contant">
+                                <h3>date 20 20</h3>
+                                <a href="#contact" class="blog-heading" style="margin: 0px; padding: .5rem;">lates news lorem
+                                    isupm doler</a>
+                            </div>
+                        </div>
+                        <div >
+                            <div id="imgbox"><img id="img-blog2" src="chield.jpg" alt=""/>
+                            </div>
+                            <div class="blog-contant">
+                                <h3 >date 20 20</h3>
+                                <a href="#contact" class="blog-heading" style="margin: 0px; padding: .5rem;">lates news lorem
+                                    isupm doler</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+            </section>
+
+            </div>
+          ))}
+      
+      </div>
+
+
+       var image = this.props.data.image,
+               title = this.props.data.title,
+               subtitle = this.props.data.subtitle;
+       return (
+           <figure className="snip1584">
+               <img src={image} />
+               <figcaption>
+                   <h3>{title}</h3>
+                   <h5>{subtitle}</h5>
+               </figcaption><a href="#"></a>
+           </figure>
+       )
+   }
+});
+var News = React.createClass({
+   render: function() {
+       var data = this.props.data;
+       var newsTemplate;
+       var settings = {
+       dots: true,
+           infinite: true,
+         slidesToShow: 3,
+         slidesToScroll: 1,
+   }
+       if (data.length > 0) {
+           newsTemplate = data.map(function(item, index) {
+               return (
+                       <div key={index}>
+                           <Article data={item} />
+                       </div>
+               )
+           })
+       } else {
+           newsTemplate = <p>Please add some cards</p>
+       }
+       return (
+           <div className='news'>
+               <Slider {...settings}>{newsTemplate}</Slider>
+               <strong className={'news__count ' + (data.length > 0 ? '':'none') }>
+                   Total cards: {data.length}
+               </strong>
+           </div>
+       );
+   }
+}); -->
